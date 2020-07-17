@@ -4,30 +4,33 @@ import { RightTriangle, LeftTriangle } from "~/components/triangles/index";
 export default function Recusive({
   depth,
   unit,
-  maxdepth = depth + 1,
+  step,
+  maxdepth = depth + step,
   reverse = false,
 }: {
   depth: number;
   maxdepth?: number;
   reverse?: boolean;
   unit: "in" | "cm";
+  step: number;
 }) {
-  if (depth < 1) {
+  if (depth - step < 0) {
     return null;
   }
   return (
     <div>
       <>
         {reverse ? null : <LeftTriangle />}
-        {(maxdepth - depth) / 10}
+        {maxdepth - depth}
         {unit}
         {reverse ? <RightTriangle /> : null}
       </>
       <Recusive
-        depth={depth - 1}
+        depth={depth - step}
         unit={unit}
         maxdepth={maxdepth}
         reverse={reverse}
+        step={step}
       />
     </div>
   );

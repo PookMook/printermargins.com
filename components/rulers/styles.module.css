@@ -5,7 +5,7 @@
 }
 .right div {
   text-align: right;
-  padding-right: 0.1in;
+  padding-right: var(--step);
 }
 
 .left {
@@ -15,5 +15,5 @@
 }
 .left div {
   text-align: left;
-  padding-left: 0.1in;
+  padding-left: var(--step);
 }
