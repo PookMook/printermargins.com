@@ -4,9 +4,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.pickers > div {
+  text-align: center;
+}
 
 @media print {
-  .pickers {
+  .pickers > div {
     display: none;
   }
 }

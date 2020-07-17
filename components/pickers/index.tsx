@@ -88,6 +88,22 @@ export default function Pickers({
 }) {
   return (
     <section className={styles.pickers}>
+      <article className={styles.text}>
+        <p>
+          Every printer is different, some feed paper slightly skewed, some have
+          short print head that can't reach the whole page.
+        </p>
+        <p>
+          To check the margins induced by your printer, select the
+          dimensions/orientation and units your want to see your margins. Each
+          page might have slightly different result, depending on paper feeding
+          precision, but having an idea is a good start!
+        </p>
+        <p>
+          Print this page and check for the fully printed triangle closest to
+          the edge, the number associated will be your margins
+        </p>
+      </article>
       <div>
         <label>
           Unit:{" "}

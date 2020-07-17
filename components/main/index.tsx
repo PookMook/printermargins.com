@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Right from "~/components/rulers/right";
 import Left from "~/components/rulers/left";
@@ -11,6 +11,16 @@ export default function Main() {
   const [dimensions, setDimensions] = useState<string[]>(["11in", "8.5in"]);
   const [unit, setUnit] = useState<"in" | "cm">("in");
   const [max, setMax] = useState<number>(2);
+
+  useEffect(() => {
+    if (unit === "in") {
+      setStep(0.0625);
+      setMax(1);
+    } else if (unit === "cm") {
+      setStep(0.1);
+      setMax(2);
+    }
+  }, [unit]);
 
   const actions = { setStep, setDimensions, setUnit, setMax };
   const settings = { step, dimensions, unit, max };
