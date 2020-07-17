@@ -8,6 +8,7 @@
 @media print {
   .main {
     background-color: white;
+    border: 1px solid #c0c0c0;
     height: var(--height);
     width: var(--width);
   }
