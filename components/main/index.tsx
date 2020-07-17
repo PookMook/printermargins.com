@@ -6,7 +6,7 @@ import Pickers from "~/components/pickers";
 
 export default function Main() {
   const [step, setStep] = useState<number>(0.0625);
-  const [dimensions, setDimensions] = useState<string[]>(["11in", "8,5in"]);
+  const [dimensions, setDimensions] = useState<string[]>(["11in", "8.5in"]);
   const [unit, setUnit] = useState<"in" | "cm">("in");
   const [max, setMax] = useState<number>(2);
 

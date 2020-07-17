@@ -21,7 +21,7 @@ export default function Recusive({
     <div>
       <>
         {reverse ? null : <LeftTriangle />}
-        {maxdepth - depth}
+        {Math.round((maxdepth - depth) * 10000) / 10000}
         {unit}
         {reverse ? <RightTriangle /> : null}
       </>

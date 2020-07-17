@@ -131,11 +131,11 @@ export default function Pickers({
         <label>
           Print dimensions:{" "}
           <select
-            onChange={(e) => setDimensions(e.target.value.split(","))}
-            value={dimensions.join(",")}
+            onChange={(e) => setDimensions(e.target.value.split("/"))}
+            value={dimensions.join("/")}
           >
             {dimensionsPicker.map((s) => (
-              <option key={s.value.join(",")} value={s.value.join(",")}>
+              <option key={s.value.join("/")} value={s.value.join("/")}>
                 {s.label}
               </option>
             ))}
