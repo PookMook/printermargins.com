@@ -16,3 +16,7 @@ h6 {
   font-size: 1rem;
   margin: 0;
 }
+
+@page {
+  margin: 0;
+}
