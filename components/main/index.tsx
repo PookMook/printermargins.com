@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Right from "~/components/rulers/right";
 import Left from "~/components/rulers/left";
+import Top from "~/components/rulers/top";
+import Bottom from "~/components/rulers/bottom";
 import Pickers from "~/components/pickers";
 
 export default function Main() {
@@ -17,6 +19,8 @@ export default function Main() {
     <main className={styles.main}>
       <Right {...settings} />
       <Left {...settings} />
+      <Top {...settings} />
+      <Bottom {...settings} />
       <Style
         step={step}
         unit={unit}
