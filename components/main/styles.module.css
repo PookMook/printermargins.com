@@ -7,7 +7,7 @@
 
 @media print {
   .main {
-    height: 11in;
-    width: 8.5in;
+    height: var(--height);
+    width: var(--width);
   }
 }

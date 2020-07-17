@@ -5,13 +5,15 @@ import Recursive from "./recursive";
 export default function Left({
   unit,
   step,
+  max,
 }: {
   unit: "cm" | "in";
   step: number;
+  max: number;
 }) {
   return (
     <section className={styles.left}>
-      <Recursive depth={2} unit={unit} step={step} />
+      <Recursive depth={max} unit={unit} step={step} />
     </section>
   );
 }
