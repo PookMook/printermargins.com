@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const steps = [
+const stepsPicker = [
   {
     value: 0.1,
     label: "0.1",
@@ -10,14 +10,14 @@ const steps = [
   { value: 0.125, label: "1/8" },
   { value: 0.25, label: "1/4" },
 ];
-const units = [
+const unitsPicker = [
   {
     value: "in",
     label: "inches",
   },
   { value: "cm", label: "cm" },
 ];
-const max = [
+const maxPicker = [
   {
     value: 1,
     label: "1",
@@ -40,7 +40,7 @@ const max = [
   },
 ];
 
-const dimensions = [
+const dimensionsPicker = [
   {
     value: ["8.5in", "11in"],
     label: "Letter Portrait",
@@ -72,19 +72,27 @@ export default function Pickers({
   setDimensions,
   setUnit,
   setMax,
+  step,
+  dimensions,
+  unit,
+  max,
 }: {
   setStep: React.Dispatch<React.SetStateAction<number>>;
   setDimensions: React.Dispatch<React.SetStateAction<string[]>>;
   setUnit: React.Dispatch<React.SetStateAction<string>>;
   setMax: React.Dispatch<React.SetStateAction<number>>;
+  step: number;
+  dimensions: string[];
+  unit: "cm" | "in";
+  max: number;
 }) {
   return (
     <section className={styles.pickers}>
       <div>
         <label>
           Unit:{" "}
-          <select onChange={(e) => setUnit(e.target.value)}>
-            {units.map((s) => (
+          <select onChange={(e) => setUnit(e.target.value)} value={unit}>
+            {unitsPicker.map((s) => (
               <option key={s.value} value={s.value}>
                 {s.label}
               </option>
@@ -95,8 +103,8 @@ export default function Pickers({
       <div>
         <label>
           maximum:{" "}
-          <select onChange={(e) => setMax(Number(e.target.value))}>
-            {max.map((s) => (
+          <select onChange={(e) => setMax(Number(e.target.value))} value={max}>
+            {maxPicker.map((s) => (
               <option key={s.value} value={s.value}>
                 {s.label}
               </option>
@@ -107,8 +115,11 @@ export default function Pickers({
       <div>
         <label>
           Step:{" "}
-          <select onChange={(e) => setStep(Number(e.target.value))}>
-            {steps.map((s) => (
+          <select
+            onChange={(e) => setStep(Number(e.target.value))}
+            value={step}
+          >
+            {stepsPicker.map((s) => (
               <option key={s.value} value={s.value}>
                 {s.label}
               </option>
@@ -119,8 +130,11 @@ export default function Pickers({
       <div>
         <label>
           Print dimensions:{" "}
-          <select onChange={(e) => setDimensions(e.target.value.split(","))}>
-            {dimensions.map((s) => (
+          <select
+            onChange={(e) => setDimensions(e.target.value.split(","))}
+            value={dimensions.join(",")}
+          >
+            {dimensionsPicker.map((s) => (
               <option key={s.value.join(",")} value={s.value.join(",")}>
                 {s.label}
               </option>
