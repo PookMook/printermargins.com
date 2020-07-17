@@ -95,13 +95,17 @@ export default function Pickers({
         </p>
         <p>
           To check the margins induced by your printer, select the
-          dimensions/orientation and units your want to see your margins. Each
-          page might have slightly different result, depending on paper feeding
-          precision, but having an idea is a good start!
+          dimensions/orientation and units your want to see your margins in.
         </p>
         <p>
-          Print this page and check for the fully printed triangle closest to
-          the edge, the number associated will be your margins
+          Each page might have slightly different results, depending on paper
+          feeding precision, but having an idea is a good start!
+        </p>
+        <p>
+          <strong>
+            Print this page and check for the fully printed triangle closest to
+            the edge, the number associated will be your margins
+          </strong>
         </p>
       </article>
       <div>
