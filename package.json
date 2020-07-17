@@ -1,0 +1,36 @@
+{
+  "name": "printermargins.com",
+  "version": "1.0.0",
+  "description": "Find out the margins your printer induce",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PookMook/printermargins.com.git"
+  },
+  "keywords": [
+    "printer",
+    "margins",
+    "tool"
+  ],
+  "author": "Arthur Juchereau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PookMook/printermargins.com/issues"
+  },
+  "homepage": "https://github.com/PookMook/printermargins.com#readme",
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.43",
+    "typescript": "^3.9.7"
+  }
+}

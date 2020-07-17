@@ -1,0 +1,13 @@
+.main {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@media print {
+  .main {
+    height: 11in;
+    width: 8.5in;
+  }
+}
