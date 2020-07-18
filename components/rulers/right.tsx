@@ -14,6 +14,7 @@ export default function Right({
   return (
     <section className={styles.right}>
       <Recursive depth={max} unit={unit} reverse={true} step={step} />
+      <h2>Right</h2>
     </section>
   );
 }

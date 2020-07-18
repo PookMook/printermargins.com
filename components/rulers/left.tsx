@@ -14,6 +14,7 @@ export default function Left({
   return (
     <section className={styles.left}>
       <Recursive depth={max} unit={unit} step={step} />
+      <h2>Left</h2>
     </section>
   );
 }

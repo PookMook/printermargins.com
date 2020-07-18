@@ -8,6 +8,10 @@
   text-align: right;
   padding-right: var(--step);
 }
+:is(.right, .left, .top, .bottom) h2 {
+  margin: 0.25in 1in;
+  font-size: 1.5rem;
+}
 
 .left {
   position: absolute;
