@@ -8,6 +8,17 @@
   text-align: center;
 }
 
+.cta {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 7px;
+  border: 1px solid navy;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media print {
   .pickers > div {
     display: none;

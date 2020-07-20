@@ -110,12 +110,28 @@ export default function Pickers({
       </article>
       <div>
         <button
+          className={styles.cta}
           onClick={() => {
             window.print();
           }}
         >
           Print the test page
         </button>
+      </div>
+      <div>
+        <label>
+          Print dimensions:{" "}
+          <select
+            onChange={(e) => setDimensions(e.target.value.split("/"))}
+            value={dimensions.join("/")}
+          >
+            {dimensionsPicker.map((s) => (
+              <option key={s.value.join("/")} value={s.value.join("/")}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
       <div>
         <label>
@@ -150,21 +166,6 @@ export default function Pickers({
           >
             {stepsPicker.map((s) => (
               <option key={s.value} value={s.value}>
-                {s.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <div>
-        <label>
-          Print dimensions:{" "}
-          <select
-            onChange={(e) => setDimensions(e.target.value.split("/"))}
-            value={dimensions.join("/")}
-          >
-            {dimensionsPicker.map((s) => (
-              <option key={s.value.join("/")} value={s.value.join("/")}>
                 {s.label}
               </option>
             ))}
