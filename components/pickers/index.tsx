@@ -109,6 +109,15 @@ export default function Pickers({
         </p>
       </article>
       <div>
+        <button
+          onClick={() => {
+            window.print();
+          }}
+        >
+          Print the test page
+        </button>
+      </div>
+      <div>
         <label>
           Unit:{" "}
           <select onChange={(e) => setUnit(e.target.value)} value={unit}>
